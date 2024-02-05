@@ -17,7 +17,7 @@ const DesktopNav = () => {
                 {
                     socials.map((option, index) => (
                         <GsapMagnetic key={index}>
-                            <div className='h-[3.5rem] w-[3.5rem] text-[2rem] border-none border grid place-items-center cursor-pointer'>
+                            <div className='h-[3.5rem] w-[3.5rem] text-[1.25rem] border rounded-full grid place-items-center cursor-pointer dark:border-none'>
                                 <Link to={option.url} target='_blank'>
                                     <i className={`${option.fontawesome_icon}`}> </i>
                                 </Link>
@@ -28,7 +28,10 @@ const DesktopNav = () => {
             </div>
 
             {/* resume link */}
-            <Link to='/resume' className='h-[3.5rem] px-[2rem] bg-white text-black rounded-full grid place-items-center'>
+            <Link
+                to='/resume'
+                className='h-[3.5rem] px-[2rem] bg-black text-white rounded-full grid place-items-center dark:bg-white dark:text-black'
+            >
                 <span>Resume</span>
             </Link>
         </nav>

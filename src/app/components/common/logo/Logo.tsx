@@ -5,10 +5,9 @@ const Logo = () => {
     const navigate = useNavigate();
 
     return (
-
         <GsapMagnetic>
             <div onClick={() => navigate('/')} className='group inline-flex gap-[10px] cursor-pointer '>
-                <p className="text-[1.5rem] group-hover:rotate-[360deg] transition-all ease-custom-transition duration-500">©</p>
+                <p className="text-[1.75rem] group-hover:rotate-[360deg] transition-all ease-custom-transition duration-500">©</p>
 
                 <div
                     style={{ fontSize: 'var(--normal-font-size)' }}
