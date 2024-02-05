@@ -1,0 +1,50 @@
+import gsap from 'gsap';
+import React from 'react';
+
+type PropType = {
+    children: React.ReactNode;
+};
+
+const GsapMagnetic: React.FC<PropType> = ({ children }) => {
+    const ref = React.useRef<HTMLDivElement>(null);
+
+    React.useEffect(() => {
+        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
+        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+
+        // mouse move event
+        const handleMouseMove = (e: MouseEvent) => {
+            const { clientX, clientY } = e;
+            const rect = ref.current?.getBoundingClientRect();
+
+            if (rect) {
+                const x = clientX - (rect.left + rect.width / 2);
+                const y = clientY - (rect.top + rect.height / 2);
+
+                xTo(x * 0.35);
+                yTo(y * 0.35);
+            }
+        };
+
+        const handleMouseLeave = () => {
+            xTo(0);
+            yTo(0);
+        };
+
+        ref.current?.addEventListener('mousemove', handleMouseMove);
+        ref.current?.addEventListener('mouseleave', handleMouseLeave);
+
+        return () => {
+            ref.current?.removeEventListener('mousemove', handleMouseMove);
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+            ref.current?.removeEventListener('mouseleave', handleMouseLeave);
+        };
+    }, []);
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const clonedElement = React.isValidElement(children) ? React.cloneElement(children as React.ReactElement<any>, { ref }) : <div />;
+
+    return clonedElement;
+};
+
+export default GsapMagnetic;
