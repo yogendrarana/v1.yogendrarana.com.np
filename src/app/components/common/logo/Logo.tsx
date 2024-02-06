@@ -12,7 +12,7 @@ const Logo = () => {
                 <div
                     style={{ fontSize: 'var(--normal-font-size)' }}
                     className="
-                        w-[130px] hover:w-[150px]
+                        w-[140px] hover:w-[150px]
                         flex items-center gap-[5px] relative overflow-hidden
                         transition-all ease-custom-transition duration-500
                     "

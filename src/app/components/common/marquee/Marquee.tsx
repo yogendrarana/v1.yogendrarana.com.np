@@ -1,17 +1,6 @@
-"use client";
-
-import React from 'react'
-
-// define prop types
-type PropType = {
-    children: React.ReactNode
-}
-
-const Marquee: React.FC<PropType> = ({ children }) => {
+const Marquee = () => {
     return (
-        <div className='w-full'>
-            {children}
-        </div>
+        <div>Marquee</div>
     )
 }
 
