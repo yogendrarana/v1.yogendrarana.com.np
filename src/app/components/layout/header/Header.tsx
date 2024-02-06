@@ -7,7 +7,7 @@ import DesktopNav from "../nav/DesktopNav";
 const Header = () => {
     return (
         <>
-            <div className='h-[var(--header-height)] w-full px-[2rem] flex items-center justify-between'>
+            <div className='h-[var(--header-height)] w-full px-[var(--padding-x)] flex items-center justify-between'>
                 <div>
                     <Logo />
                 </div>

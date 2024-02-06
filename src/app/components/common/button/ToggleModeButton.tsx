@@ -28,9 +28,9 @@ const ToggleModeButton = () => {
         <div
             onClick={handleToggleTheme}
             className="
-                h-[3rem] w-[3rem] border rounded-full
+                h-[3.5rem] w-[3.5rem] border rounded-full
                 grid place-items-center cursor-pointer
-                fixed bottom-[2rem] right-[2rem]
+                fixed bottom-[var(--padding-x)] right-[var(--padding-x)]
                 dark:bg-white dark:text-black
             "
         >

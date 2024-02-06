@@ -9,8 +9,8 @@ const GsapMagnetic: React.FC<PropType> = ({ children }) => {
     const ref = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
-        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
-        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.35)" });
+        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.35)" });
 
         // mouse move event
         const handleMouseMove = (e: MouseEvent) => {

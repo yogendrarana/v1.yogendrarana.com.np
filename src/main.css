@@ -5,8 +5,11 @@
 
 :root {
     /* height */
-    --header-height: 5rem;
+    --header-height: 8rem;
     --btn-height: 2.5rem;
+
+    /* padding */
+    --padding-x: 5rem;
 
     /* font size */
     --normal-font-size: 18px;
