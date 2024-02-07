@@ -1,5 +1,3 @@
-// import Marquee from "react-fast-marquee"
-
 // import language icons
 import JS from "../../../../assets/images/logo/js.png"
 import TS from "../../../../assets/images/logo/ts.png"
@@ -26,6 +24,32 @@ import Git from "../../../../assets/images/logo/git.png"
 import Docker from "../../../../assets/images/logo/docker.png"
 import Nginx from "../../../../assets/images/logo/nginx.png"
 
+// define rows
+const first_row = [
+    { name: "JavaScript", icon: JS },
+    { name: "TypeScript", icon: TS },
+    { name: "Go", icon: GO },
+    { name: "Git", icon: Git },
+    { name: "Docker", icon: Docker },
+    { name: "Nginx", icon: Nginx }
+]
+const second_row = [
+    { name: "React", icon: React },
+    { name: "Next", icon: Next },
+    { name: "Node", icon: Node },
+    { name: "Express", icon: Express },
+    { name: "Nest", icon: Nest },
+    { name: "Gin", icon: Gin }
+]
+const third_row = [
+    { name: "MongoDB", icon: Mongo },
+    { name: "MySQL", icon: Mysql },
+    { name: "PostgreSQL", icon: Postgres },
+    { name: "Redis", icon: Redis },
+    { name: "Prisma", icon: Prisma },
+    { name: "Drizzle", icon: Drizzle }
+]
+
 
 // stack component
 const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
@@ -33,9 +57,9 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
         <div className='flex gap-[1rem] justify-center cursor-pointer'>
             {
                 tech.map((item, index) => (
-                    <div key={index} className='w-[25rem] flex justify-center items-center gap-[1rem] border p-[0.5rem] '>
-                        {item.icon && <img src={item?.icon} alt={item.name} className="h-[3.5rem] w-[3.5rem] rounded-[0.5rem] object-cover" />}
-                        <p className='text-[2rem]'>{item.name}</p>
+                    <div key={index} className='w-[25rem] text-left px-[2rem] py-[1rem] bg-white dark:bg-black flex items-center gap-[1rem] border shadow-sm'>
+                        {item.icon && <img src={item?.icon} alt={item.name} className="h-[3rem] w-[3rem] rounded-[0.5rem] object-cover" />}
+                        <p className='text-[1.5rem]'>{item.name}</p>
                     </div>
                 ))
             }
@@ -44,54 +68,23 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
 }
 
 export default function Stack() {
-    const first_row = [
-        { name: "JavaScript", icon: JS },
-        { name: "TypeScript", icon: TS },
-        { name: "Go", icon: GO },
-        { name: "Git", icon: Git },
-        { name: "Docker", icon: Docker },
-        { name: "Nginx", icon: Nginx }
-    ]
-    const second_row = [
-        { name: "React", icon: React },
-        { name: "Next", icon: Next },
-        { name: "Node", icon: Node },
-        { name: "Express", icon: Express },
-        { name: "Nest", icon: Nest },
-        { name: "Gin", icon: Gin }
-    ]
-    const third_row = [
-        { name: "MongoDB", icon: Mongo },
-        { name: "MySQL", icon: Mysql },
-        { name: "PostgreSQL", icon: Postgres },
-        { name: "Redis", icon: Redis },
-        { name: "Prisma", icon: Prisma },
-        { name: "Drizzle", icon: Drizzle }
-    ]
-
     return (
-        <div className='my-[5rem] px-[var(--padding-x)] py-[5rem] flex flex-col text-center'>
+        <div className='px-[var(--padding-x)] flex flex-col text-center'>
             <h2 className='text-[5rem]'>My Stack</h2>
-            <p className='text-[2rem] text-gray-400'>These are the technologies I am familiar with.</p>
+            <p className='text-[1.8rem] text-gray-400'>These are some of the technologies I have used up until now.</p>
 
             <div className='mt-[2rem] flex flex-col gap-[1rem]'>
                 {/* first_row */}
-                {/* <Marquee autoFill pauseOnClick gradient gradientWidth={50}> */}
                 <Tech tech={first_row} />
-                {/* </Marquee> */}
 
                 {/* second_row */}
-                {/* <Marquee autoFill pauseOnClick gradient gradientWidth={50}> */}
                 <Tech tech={second_row} />
-                {/* </Marquee> */}
 
                 {/* third_row */}
-                {/* <Marquee autoFill pauseOnClick gradient gradientWidth={50}> */}
                 <Tech tech={third_row} />
-                {/* </Marquee> */}
 
             </div>
-        </div>
+        </div >
     )
 }
 

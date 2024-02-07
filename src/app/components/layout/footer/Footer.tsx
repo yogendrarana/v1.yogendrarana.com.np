@@ -1,26 +1,22 @@
-import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
+
+// import logo
+import Logo from "../../common/logo/Logo";
 
 const Footer = () => {
-    const heading = "Footer"
+
     return (
-        <div id="work" className="h-[80vh] p-[1rem] border bg-black text-white">
-            <h1 className="text-center text-[10rem] tracking-widest" >
-                {
-                    heading.split("").map((char, index) => {
-                        return (
-                            <motion.span
-                                key={index}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 1 }}
-                            >
-                                {char}
-                            </motion.span>
-                        )
-                    })
-                }
-            </h1>
-        </div>
+        <footer className='h-[var(--nav-height)] w-[100%] mt-[5rem] px-[var(--padding-x)] py-[2rem] flex justify-between items-center border-t'>
+            <div className='flex items-center gap-[2rem]'>
+                <Logo />
+            </div>
+            <Link to="#" className='text-[1.25rem]'>Privacy Policy</Link>
+            <Link to="#" className='text-[1.25rem]'>Cookie Policy</Link>
+            <Link to="#" className='text-[1.25rem]'>Terms & Conditions</Link>
+
+            {/* attribute */}
+            <a className='text-[1.25rem]' target='_blank' href="https://www.flaticon.com/" title="chat box icons">Icons Credit - Flaticon</a>
+        </footer>
     )
 }
 

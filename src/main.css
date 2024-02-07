@@ -30,17 +30,17 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-/* body::before {
+body::before {
     content: "";
     position: fixed;
     inset: 0;
-    --size: 100px;
+    --size: 75px;
     background:
         linear-gradient(hsl(0, 13%, 95%) 0 2px,
             transparent 2px var(--size)) 50% 50% / var(--size) var(--size),
         linear-gradient(90deg,
             hsl(0, 13%, 95%) 0 2px,
             transparent 2px var(--size)) 50% 50% / var(--size) var(--size);
-    mask: linear-gradient(25deg, white, transparent);
+    mask: linear-gradient(180deg, white, transparent);
     z-index: -1;
-} */
+}

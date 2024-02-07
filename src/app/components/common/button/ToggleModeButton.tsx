@@ -31,14 +31,15 @@ const ToggleModeButton = () => {
                 h-[3.5rem] w-[3.5rem] border rounded-full
                 grid place-items-center cursor-pointer
                 fixed bottom-[var(--padding-x)] right-[var(--padding-x)]
+                shadow-lg bg-white
                 dark:bg-white dark:text-black
             "
         >
             {
                 theme === 'light' ? (
-                    <i className="fas fa-moon"> </i>
-                ) : (
                     <i className="fas fa-sun"> </i>
+                ) : (
+                    <i className="fas fa-moon"> </i>
                 )
             }
         </div>
