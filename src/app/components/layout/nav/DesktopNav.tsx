@@ -30,15 +30,12 @@ const DesktopNav = () => {
             </div>
 
             {/* resume link */}
-            <GsapMagnetic>
-
-                <Link
-                    to='/resume'
-                    className='h-[3.5rem] px-[2rem] bg-black text-white rounded-full grid place-items-center dark:bg-white dark:text-black'
-                >
-                    <span>Resume</span>
-                </Link>
-            </GsapMagnetic>
+            <Link
+                to='/resume'
+                className='h-[3.5rem] px-[2rem] bg-black text-white rounded-full grid place-items-center dark:bg-white dark:text-black'
+            >
+                <span>Resume</span>
+            </Link>
         </nav>
     )
 }

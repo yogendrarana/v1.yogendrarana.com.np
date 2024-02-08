@@ -42,8 +42,7 @@ const Projects = () => {
                             </div>
 
                             <div className="flex justify-between">
-                                <div className='whitespace-nowrap flex justify-between gap-[1rem]'>
-
+                                <div className='whitespace-nowrap flex justify-between gap-[2rem]'>
                                     {
                                         project.tech.map((tech, index) => (
                                             <span key={index} className='text-[1.25rem]'>{tech}</span>
@@ -53,7 +52,7 @@ const Projects = () => {
 
                                 <div className='flex items-center gap-[1rem] text-[1.25rem]'>
                                     <p className="text-[1.5rem]">{new URL(project.link).hostname}</p>
-                                    <Link to={project.link} target="_blank" className="text-[1.25rem]">
+                                    <Link to={project.link} target="_blank" className="text-[1.5rem]">
                                         <i className="fa-solid fa-square-arrow-up-right"></i>
                                     </Link>
                                 </div>

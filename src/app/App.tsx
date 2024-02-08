@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 // import component
-// import FloatingMenu from "./components/layout/nav/FloatingMenu";
-import ToggleModeButton from "./components/common/button/ToggleModeButton";
+import FloatingButtons from "./components/common/button/FloatingButtons";
 
 const App = () => {
     return (
@@ -10,8 +9,7 @@ const App = () => {
             <Outlet />
 
             {/* <FloatingMenu /> */}
-
-            <ToggleModeButton />
+            <FloatingButtons />
         </div>
     );
 }
