@@ -1,0 +1,17 @@
+.name {
+    position: relative;
+}
+
+.name>.first_name {
+    font-size: 12.5rem;
+    font-weight: bolder;
+    color: white;
+    -webkit-text-stroke: 3px black;
+}
+
+.name>.last_name {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bolder;
+    right: 0;
+}
