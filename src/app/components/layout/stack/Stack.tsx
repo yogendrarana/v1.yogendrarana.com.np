@@ -29,27 +29,24 @@ const first_row = [
     { name: "JavaScript", icon: JS },
     { name: "TypeScript", icon: TS },
     { name: "Go", icon: GO },
-    { name: "Git", icon: Git },
-    { name: "Docker", icon: Docker },
-    { name: "Nginx", icon: Nginx }
-]
-const second_row = [
     { name: "React", icon: React },
     { name: "Next", icon: Next },
     { name: "Node", icon: Node },
     { name: "Express", icon: Express },
     { name: "Nest", icon: Nest },
-    { name: "Gin", icon: Gin }
+    { name: "Gin", icon: Gin },
 ]
-const third_row = [
+const second_row = [
+    { name: "PostgreSQL", icon: Postgres },
     { name: "MongoDB", icon: Mongo },
     { name: "MySQL", icon: Mysql },
-    { name: "PostgreSQL", icon: Postgres },
     { name: "Redis", icon: Redis },
     { name: "Prisma", icon: Prisma },
-    { name: "Drizzle", icon: Drizzle }
+    { name: "Drizzle", icon: Drizzle },
+    { name: "Git", icon: Git },
+    { name: "Docker", icon: Docker },
+    { name: "Nginx", icon: Nginx }
 ]
-
 
 // stack component
 const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
@@ -57,9 +54,8 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
         <div className='flex gap-[1rem] justify-center cursor-pointer'>
             {
                 tech.map((item, index) => (
-                    <div key={index} className='w-[25rem] text-left px-[2rem] py-[1rem] bg-white dark:bg-black flex items-center gap-[1rem] border shadow-sm'>
-                        {item.icon && <img src={item?.icon} alt={item.name} className="h-[3rem] w-[3rem] rounded-[0.5rem] object-cover" />}
-                        <p className='text-[1.5rem]'>{item.name}</p>
+                    <div key={index} className='group p-[1.25rem] bg-white shadow-sm border dark:border-gray-600 dark:bg-black flex items-center gap-[1rem]'>
+                        <img src={item?.icon} alt={item.name} className="h-[4rem] w-[4rem] object-cover" />
                     </div>
                 ))
             }
@@ -71,18 +67,14 @@ export default function Stack() {
     return (
         <div className='min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center text-center'>
             <h2 className='text-[5rem]'>My Stack</h2>
-            <p className='text-[1.8rem] text-gray-400'>These are some of the technologies I have used up until now.</p>
+            <p className='text-[1.8rem] text-gray-400'>These are my thech stack as of now.</p>
 
-            <div className='mt-[2rem] flex flex-col gap-[1rem]'>
+            <div className='mt-[2rem] grid gap-[1rem]'>
                 {/* first_row */}
                 <Tech tech={first_row} />
 
                 {/* second_row */}
                 <Tech tech={second_row} />
-
-                {/* third_row */}
-                <Tech tech={third_row} />
-
             </div>
         </div >
     )

@@ -30,27 +30,27 @@ const Projects = () => {
         <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center">
             <h2 className='text-[5rem]'>Projects</h2>
 
-            <div className="flex flex-col gap-[2rem] text-[1.8rem]">
+            <div className="flex flex-col gap-[3rem]">
                 {
                     projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group flex flex-col cursor-pointer text-gray-400 hover:text-black dark:hover:text-white duration-300"
+                            className="group flex flex-col gap-[1rem] cursor-pointer text-gray-400 hover:text-black dark:hover:text-white duration-300"
                         >
                             <div className="flex justify-between">
-                                <div className='whitespace-nowrap'>{project.name}</div>
+                                <div className='whitespace-nowrap text-[2rem]'>{project.name}</div>
                             </div>
 
                             <div className="flex justify-between">
                                 <div className='whitespace-nowrap flex justify-between gap-[2rem]'>
                                     {
                                         project.tech.map((tech, index) => (
-                                            <span key={index} className='text-[1.25rem]'>{tech}</span>
+                                            <span key={index} className='text-[1.5rem]'>{tech}</span>
                                         ))
                                     }
                                 </div>
 
-                                <div className='flex items-center gap-[1rem] text-[1.25rem]'>
+                                <div className='flex items-center gap-[1rem] text-[1.5rem]'>
                                     <p className="text-[1.5rem]">{new URL(project.link).hostname}</p>
                                     <Link to={project.link} target="_blank" className="text-[1.5rem]">
                                         <i className="fa-solid fa-square-arrow-up-right"></i>

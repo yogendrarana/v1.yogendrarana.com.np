@@ -25,23 +25,23 @@ const Career = () => {
             <div>
                 <h2 className='text-[5rem]'>Career</h2>
             </div>
-            <div className='flex flex-col gap-[2rem] text-[1.8rem]'>
+            <div className='flex flex-col gap-[3rem]'>
                 {
                     career.map((exp, index) => {
                         return (
                             <div
                                 key={index}
-                                className="group flex flex-col cursor-pointer text-gray-400 hover:text-black dark:hover:text-white duration-300"
+                                className="group flex flex-col gap-[1rem] cursor-pointer text-gray-400 hover:text-black dark:hover:text-white duration-300"
                             >
                                 <div className="flex justify-between">
-                                    <div className='whitespace-nowrap]'>{exp.company}</div>
-                                    <div className='whitespace-nowrap text-[1.25rem]'>{exp.start_date}</div>
+                                    <div className='whitespace-nowrap text-[2rem]'>{exp.company}</div>
+                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.start_date}</div>
                                 </div>
 
 
                                 <div className="flex justify-between">
-                                    <div className='whitespace-nowrap text-[1.25rem]'>{exp.role}</div>
-                                    <div className='whitespace-nowrap text-[1.25rem]'>{exp.end_date}</div>
+                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.role}</div>
+                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.end_date}</div>
                                 </div>
 
                                 <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" />

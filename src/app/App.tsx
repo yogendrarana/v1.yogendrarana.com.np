@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 
 // import component
-import FloatingButtons from "./components/common/button/FloatingButtons";
+import BackToTopButton from "./components/common/button/BackToTopButton";
+import ToggleModeButton from "./components/common/button/ToggleModeButton";
 
 const App = () => {
     return (
@@ -9,7 +10,10 @@ const App = () => {
             <Outlet />
 
             {/* <FloatingMenu /> */}
-            <FloatingButtons />
+            <div className=" flex flex-col gap-[0.5rem] fixed bottom-[var(--padding-x)] right-[var(--padding-x)] " >
+                <BackToTopButton />
+                <ToggleModeButton />
+            </div>
         </div>
     );
 }
