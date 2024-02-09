@@ -1,21 +1,27 @@
-import { Link } from "react-router-dom";
+import { Socials } from "../../common/socials/Socials";
+import Watch from "../../common/watch/Watch";
 
-// import logo
-import Logo from "../../common/logo/Logo";
 
 const Footer = () => {
 
     return (
-        <footer className='h-[var(--nav-height)] w-[100%] mt-[5rem] px-[var(--padding-x)] py-[2rem] flex justify-between items-center border-t'>
-            <div className='flex items-center gap-[2rem]'>
-                <Logo />
-            </div>
-            <Link to="#" className='text-[1.25rem]'>Privacy Policy</Link>
-            <Link to="#" className='text-[1.25rem]'>Cookie Policy</Link>
-            <Link to="#" className='text-[1.25rem]'>Terms & Conditions</Link>
+        <footer className=' min-h-[var(--nav-height)] mt-[5rem] px-[var(--padding-x)] py-[2rem] flex flex-col items-center border-t text-[1.25rem] ' >
+            <div className="w-full flex justify-between items-center">
+                {/* watch */}
+                <div className="w-1/3">
+                    <Watch />
+                </div>
 
-            {/* attribute */}
-            <a className='text-[1.25rem]' target='_blank' href="https://www.flaticon.com/" title="chat box icons">Icons Credit - Flaticon</a>
+                {/* socials */}
+                <div className="w-1/3">
+                    <Socials />
+                </div>
+
+                {/* email */}
+                <div className="w-1/3 text-right">
+                    <p>yogendrarana.mail@gmail.com</p>
+                </div>
+            </div>
         </footer>
     )
 }

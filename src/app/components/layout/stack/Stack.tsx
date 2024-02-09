@@ -69,7 +69,7 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
 
 export default function Stack() {
     return (
-        <div className='px-[var(--padding-x)] flex flex-col text-center'>
+        <div className='min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center text-center'>
             <h2 className='text-[5rem]'>My Stack</h2>
             <p className='text-[1.8rem] text-gray-400'>These are some of the technologies I have used up until now.</p>
 

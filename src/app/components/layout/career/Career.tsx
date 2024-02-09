@@ -21,7 +21,7 @@ const Career = () => {
     ];
 
     return (
-        <div className="px-[var(--padding-x)] flex flex-col gap-[1rem]">
+        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center gap-[1rem]">
             <div>
                 <h2 className='text-[5rem]'>Career</h2>
             </div>

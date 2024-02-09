@@ -1,41 +1,41 @@
 import { useNavigate } from "react-router-dom";
-import GsapMagnetic from "../magnetic/GsapMagnetic";
+// import GsapMagnetic from "../magnetic/GsapMagnetic";
 
 const Logo = () => {
     const navigate = useNavigate();
 
     return (
-        <GsapMagnetic>
-            <div onClick={() => navigate('/')} className='group inline-flex gap-[10px] cursor-pointer '>
-                <p className="text-[1.75rem] group-hover:rotate-[360deg] transition-all ease-custom-transition duration-500">©</p>
+        // <GsapMagnetic>
+        <div onClick={() => navigate('/')} className='group inline-flex gap-[10px] cursor-pointer '>
+            <p className="text-[1.75rem] group-hover:rotate-[360deg] transition-all ease-custom-transition duration-500">©</p>
 
-                <div
-                    style={{ fontSize: 'var(--normal-font-size)' }}
-                    className="
-                        w-[140px] hover:w-[150px]
+            <div
+                style={{ fontSize: 'var(--normal-font-size)' }}
+                className="
+                        w-[140px] group-hover:w-[150px]
                         flex items-center gap-[5px] relative overflow-hidden
                         transition-all ease-custom-transition duration-500
                     "
-                >
-                    <p
-                        className="
+            >
+                <p
+                    className="
                             group-hover:translate-x-[-105%] whitespace-nowrap
                             transition-all ease-custom-transition duration-500
                         "
-                    >Yogendra Rana</p>
+                >Yogendra Rana</p>
 
-                    <div
-                        className="
+                <div
+                    className="
                             absolute left-[100%]
                             group-hover:left-0 whitespace-nowrap
                             transition-all ease-custom-transition duration-500
                         "
-                    >
-                        <p>Web Developer</p>
-                    </div>
+                >
+                    <p>Web Developer</p>
                 </div>
             </div>
-        </GsapMagnetic>
+        </div>
+        // </GsapMagnetic>
     )
 }
 
