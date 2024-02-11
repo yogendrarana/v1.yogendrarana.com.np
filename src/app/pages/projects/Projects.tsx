@@ -35,35 +35,43 @@ const Projects = () => {
                     projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group flex flex-col gap-[1rem] cursor-pointer text-gray-400 hover:text-black dark:hover:text-white duration-300"
+                            className="
+                                    group
+                                    pb-4
+                                    border-b
+                                    border-gray-400 hover:border-black dark:border-gray-400 dark:group-hover:border-white
+                                    flex justify-between gap-[1rem] 
+                                    cursor-pointer 
+                                    text-gray-500 hover:text-black 
+                                    dark:hover:text-white duration-300
+                                    lg:flex-col
+                                    md:gap-[2rem]
+                                "
                         >
-                            <div className="flex justify-between">
+                            <div className="flex flex-col justify-between overflow-hidden">
                                 <div className='whitespace-nowrap text-[2rem]'>{project.name}</div>
-                            </div>
-
-                            <div className="flex justify-between">
-                                <div className='whitespace-nowrap flex justify-between gap-[2rem]'>
+                                <div className="flex justify-between gap-[1rem] flex-wrap">
                                     {
                                         project.tech.map((tech, index) => (
                                             <span key={index} className='text-[1.5rem]'>{tech}</span>
                                         ))
                                     }
                                 </div>
-
-                                <div className='flex items-center gap-[1rem] text-[1.5rem]'>
-                                    <p className="text-[1.5rem]">{new URL(project.link).hostname}</p>
-                                    <Link to={project.link} target="_blank" className="text-[1.5rem]">
-                                        <i className="fa-solid fa-square-arrow-up-right"></i>
-                                    </Link>
-                                </div>
                             </div>
 
-                            <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" />
-                        </div>
+                            <div className="flex justify-between gap-[2rem] items-end">
+                                <p className="text-[1.5rem]">{new URL(project.link).hostname}</p>
+                                <Link to={project.link} target="_blank" className="text-[1.75rem]">
+                                    <i className="fa-solid fa-square-arrow-up-right"></i>
+                                </Link>
+                            </div>
+
+                            {/* <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" /> */}
+                        </div >
                     ))
                 }
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 
