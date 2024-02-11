@@ -13,7 +13,7 @@ export const Socials = () => {
             {
                 socials.map((option, index) => (
                     <GsapMagnetic key={index}>
-                        <div
+                        <button
                             className='
                                 h-[3.5rem] w-[3.5rem] 
                                 text-[1.5rem] 
@@ -27,7 +27,7 @@ export const Socials = () => {
                             <Link to={option.url} target='_blank'>
                                 <i className={`${option.fontawesome_icon}`}> </i>
                             </Link>
-                        </div>
+                        </button>
                     </GsapMagnetic>
                 ))
             }

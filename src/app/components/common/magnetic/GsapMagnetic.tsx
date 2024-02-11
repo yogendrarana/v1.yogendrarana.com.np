@@ -1,16 +1,16 @@
 import gsap from 'gsap';
-import React from 'react';
+import { useEffect, useRef, isValidElement, cloneElement } from 'react';
 
 type PropType = {
     children: React.ReactNode;
 };
 
 const GsapMagnetic: React.FC<PropType> = ({ children }) => {
-    const ref = React.useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
 
-    React.useEffect(() => {
-        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.35)" });
-        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.35)" });
+    useEffect(() => {
+        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
+        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
 
         // mouse move event
         const handleMouseMove = (e: MouseEvent) => {
@@ -21,8 +21,8 @@ const GsapMagnetic: React.FC<PropType> = ({ children }) => {
                 const x = clientX - (rect.left + rect.width / 2);
                 const y = clientY - (rect.top + rect.height / 2);
 
-                xTo(x * 0.35);
-                yTo(y * 0.35);
+                xTo(x);
+                yTo(y);
             }
         };
 
@@ -42,7 +42,7 @@ const GsapMagnetic: React.FC<PropType> = ({ children }) => {
     }, []);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const clonedElement = React.isValidElement(children) ? React.cloneElement(children as React.ReactElement<any>, { ref }) : <div />;
+    const clonedElement = isValidElement(children) ? cloneElement(children as React.ReactElement<any>, { ref }) : <div />;
 
     return clonedElement;
 };
