@@ -21,7 +21,7 @@ const Career = () => {
     ];
 
     return (
-        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center gap-[1rem]">
+        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center gap-[1rem] md:px-[calc(var(--padding-x)-20px)]">
             <div>
                 <h2 className='text-[5rem]'>Career</h2>
             </div>
@@ -50,7 +50,7 @@ const Career = () => {
                                 </div>
 
 
-                                <div className="flex flex-col justify-between text-end md:text-start">
+                                <div className="flex flex-col justify-between text-end md:flex-row md:just md:text-start">
                                     <div className='whitespace-nowrap text-[1.5rem]'>{exp.start_date}</div>
                                     <div className='whitespace-nowrap text-[1.5rem]'>{exp.end_date}</div>
                                 </div>

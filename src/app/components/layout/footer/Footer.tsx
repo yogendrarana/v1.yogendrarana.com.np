@@ -7,19 +7,19 @@ const Footer = () => {
 
     return (
         <footer className='min-h-[var(--nav-height)] mt-[5rem] px-[var(--padding-x)] py-[2rem] flex flex-col items-center border-t text-[1.25rem] relative' >
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex justify-between items-center md:flex-col md:items-center">
                 {/* watch */}
-                <div className="w-1/3">
+                <div className="w-1/3 md:w-full md:text-center">
                     <Watch />
                 </div>
 
                 {/* socials */}
-                <div className="w-1/3">
+                <div className="w-1/3 md:w-full md:text-center">
                     <Socials />
                 </div>
 
                 {/* email */}
-                <div className="w-1/3 text-right">
+                <div className="w-1/3 md:w-full md:text-center text-right">
                     <p>yogendrarana.mail@gmail.com</p>
                 </div>
             </div>

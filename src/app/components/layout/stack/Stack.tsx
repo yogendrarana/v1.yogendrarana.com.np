@@ -51,7 +51,7 @@ const second_row = [
 // stack component
 const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
     return (
-        <div className='flex gap-[1rem] justify-center cursor-pointer'>
+        <div className='flex flex-wrap gap-[1rem] justify-center cursor-pointer'>
             {
                 tech.map((item, index) => (
                     <div key={index} className='group p-[1.25rem] bg-white shadow-sm border dark:border-gray-600 dark:bg-black flex items-center gap-[1rem]'>
@@ -65,7 +65,7 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
 
 export default function Stack() {
     return (
-        <div className='min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center text-center'>
+        <div className='min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center text-center md:px-[calc(var(--padding-x)-20px)]'>
             <h2 className='text-[5rem]'>My Stack</h2>
             <p className='text-[1.8rem] text-gray-400'>These are my thech stack as of now.</p>
 

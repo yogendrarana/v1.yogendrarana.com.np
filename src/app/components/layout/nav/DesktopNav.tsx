@@ -6,7 +6,6 @@ import { Socials } from '../../common/socials/Socials';
 const DesktopNav = () => {
     return (
         <nav className='flex gap-[1rem] items-center' style={{ fontSize: 'var(--normal-font-size)' }}>
-
             <div className='flex gap-[1rem]'>
                 <Socials />
             </div>

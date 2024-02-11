@@ -27,7 +27,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center">
+        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center md:px-[calc(var(--padding-x)-20px)]">
             <h2 className='text-[5rem]'>Projects</h2>
 
             <div className="flex flex-col gap-[3rem]">
