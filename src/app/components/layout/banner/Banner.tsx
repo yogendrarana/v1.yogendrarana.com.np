@@ -1,16 +1,19 @@
+import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import MenuButton from "../../common/button/MenuButton";
 
-// import Photo from "../../../../assets/\/images/me/yogendra-nobg.png"
+// import componet
+import Header from "../header/Header";
+
+// import hooks
+import useNavMenu from "../../../../hooks/useNav";
 
 const Banner = () => {
+    const menu = useNavMenu();
+    const resumeObject = menu.find((m) => m.label === "Resume")!;
 
     return (
-        <div className='h-[calc(100vh-var(--header-height))] w-full flex flex-col justify-center items-center'>
-            {/* <div className='flex gap-[3rem] text-center text-[10rem] font-bold lg:hidden'>
-                <span className=''>Yogendra</span>
-                <span className=''>Rana</span>
-            </div> */}
+        <div className='h-screen w-full flex flex-col justify-between items-center border-b relative'>
+            <Header />
 
             <div className='lg:flex gap-[3rem] text-center text-[10rem] font-bold w-full'>
                 <Marquee>
@@ -18,11 +21,20 @@ const Banner = () => {
                 </Marquee>
             </div>
 
-            {/* <img src={Photo} alt="Yogendra Rana" className="w-[100px] h-[100px] rounded-full" /> */}
-            <div className='text-[2.75rem] text-center mt-5'>
-                Full Stack Developer <MenuButton />
+            <div
+                className='
+                    w-full px-[var(--padding-x)] py-[3rem]
+                    flex justify-between items-center 
+                    text-[1.5rem] text-center
+                '
+            >
+                <p>Full Stack Developer</p>
+                <div className="flex gap-[2rem]">
+                    <Link to="/contact" className="cursor-pointer border-b border-transparent hover:border-black transition-all ease duration-300">Contact</Link>
+                    <Link to={resumeObject.href} target="_blank" className="cursor-pointer border-b border-transparent hover:border-black transition-all ease duration-300">Resume</Link>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

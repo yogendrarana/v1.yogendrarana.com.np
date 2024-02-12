@@ -14,7 +14,7 @@ const useNavMenu = () => {
         },
         {
             label: "Resume",
-            href: "/resume",
+            href: "https://cv-yogendra-rana.vercel.app/",
         },
     ]
     return navMenu;

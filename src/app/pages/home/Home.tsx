@@ -2,7 +2,6 @@
 // import components
 import Projects from "../projects/Projects";
 import Stack from "../../components/layout/stack/Stack";
-import Header from "../../components/layout/header/Header";
 import Banner from "../../components/layout/banner/Banner";
 import Footer from "../../components/layout/footer/Footer";
 import Career from "../../components/layout/career/Career";
@@ -10,9 +9,6 @@ import Career from "../../components/layout/career/Career";
 const Home = () => {
     return (
         <div>
-            <div>
-                <Header />
-            </div>
             <div>
                 <Banner />
             </div>

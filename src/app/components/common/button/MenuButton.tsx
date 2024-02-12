@@ -23,7 +23,7 @@ export default function MenuButton() {
                 transition={{ duration: 0.5, type: "tween", ease: [0.76, 0, 0.24, 1] }}
             >
                 <p>Menu</p>
-                <Hamburger />
+                <Hamburger bg="white" />
             </motion.div>
         </div>
     )
