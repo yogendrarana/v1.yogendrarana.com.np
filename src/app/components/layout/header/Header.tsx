@@ -1,27 +1,32 @@
 // import components
 import Logo from "../../common/logo/Logo";
-import DesktopNav from "../nav/DesktopNav";
-import Hamburger from "../../common/hamburger/Hamburger";
-
-// import zustand store
-import { useUtilStore } from "../../../../store/useUtilStore";
-
+import { Socials } from "../../common/socials/Socials";
+import Nav from "./Nav";
 const Header = () => {
-    const { toggleMobileMenu } = useUtilStore();
 
     return (
         <>
-            <div className='h-[var(--header-height)] w-full px-[var(--padding-x)] flex items-center justify-between md:px-[calc(var(--padding-x)-20px)]'>
+            <div
+                className='
+                    h-[var(--header-height)] w-full 
+                    px-[var(--padding-x)] 
+                    flex items-center justify-between 
+                    md:px-[calc(var(--padding-x)-20px)]
+                    relative
+                '
+            >
                 <div>
                     <Logo />
                 </div>
 
-                <div className="md:hidden">
-                    <DesktopNav />
-                </div>
+                <div className="flex items-center">
+                    <div className="sm:hidden">
+                        <Socials />
+                    </div>
 
-                <div onClick={() => toggleMobileMenu()} className="hidden md:flex">
-                    <Hamburger />
+                    <div>
+                        <Nav />
+                    </div>
                 </div>
             </div>
         </>

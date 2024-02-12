@@ -1,4 +1,4 @@
-const useNav = () => {
+const useNavMenu = () => {
     const navMenu = [
         {
             label: "Home",
@@ -12,8 +12,12 @@ const useNav = () => {
             label: "Contact",
             href: "/contact",
         },
+        {
+            label: "Resume",
+            href: "/resume",
+        },
     ]
     return navMenu;
 }
 
-export default useNav;
+export default useNavMenu;

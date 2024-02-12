@@ -2,19 +2,19 @@ import { create } from 'zustand'
 
 // state
 type UtilState = {
-    isMobileMenuClicked: boolean
+    isMenuOpen: boolean
 }
 
 // actions
 type UtilActions = {
-    toggleMobileMenu: () => void
-    setIsMobileMenuClicked: (value: boolean) => void
+    toggleMenu: () => void
+    setIsMenuOpen: (value: boolean) => void
 }
 
 
 // initial state
 const initialState: UtilState = {
-    isMobileMenuClicked: false
+    isMenuOpen: false
 }
 
 // use 
@@ -25,9 +25,9 @@ export const useUtilStore = create<UtilState & UtilActions>()(
         ...initialState,
 
         // actions
-        toggleMobileMenu: () => set(state => ({ isMobileMenuClicked: !state.isMobileMenuClicked })),
+        toggleMenu: () => set(state => ({ isMenuOpen: !state.isMenuOpen })),
 
         // set state
-        setIsMobileMenuClicked: (value: boolean) => set({ isMobileMenuClicked: value })
+        setIsMenuOpen: (value: boolean) => set({ isMenuOpen: value })
     })
 )
