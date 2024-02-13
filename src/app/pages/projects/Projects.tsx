@@ -30,7 +30,7 @@ const Projects = () => {
                                 <div className="flex justify-between gap-x-[2rem] flex-wrap">
                                     {
                                         project.techStack.map((tech, index) => (
-                                            <span key={index} className='text-[1.5rem]'>{tech}</span>
+                                            <span key={index} className='text-[1.25rem]'>{tech}</span>
                                         ))
                                     }
                                 </div>
@@ -42,8 +42,6 @@ const Projects = () => {
                                     <i className="fa-solid fa-square-arrow-up-right"></i>
                                 </Link>
                             </div>
-
-                            {/* <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" /> */}
                         </div >
                     ))
                 }

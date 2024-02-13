@@ -30,7 +30,7 @@ const Career = () => {
                             >
                                 <div className="flex flex-col justify-between">
                                     <div className='whitespace-nowrap text-[2rem]'>{exp.company}</div>
-                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.role}</div>
+                                    <div className='whitespace-nowrap text-[1.25rem]'>{exp.role}</div>
                                 </div>
 
 
@@ -38,8 +38,6 @@ const Career = () => {
                                     <div className='whitespace-nowrap text-[1.5rem]'>{exp.start}</div>
                                     <div className='whitespace-nowrap text-[1.5rem]'>{exp.end}</div>
                                 </div>
-
-                                {/* <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" /> */}
                             </div>
                         )
                     })

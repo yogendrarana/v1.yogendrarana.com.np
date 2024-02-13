@@ -89,13 +89,13 @@ export const MY_DATA = {
     ],
     projects: [
         {
-            title: "Iphone Fix by XPF",
-            techStack: ["HTML", "CSS", "Vanilla JS"],
-            description: "A simple website for a mobile repair shop. Role: Frontend Developer.",
+            title: "Catwalk Pokhara",
+            techStack: ["HTML", "CSS", "JS"],
+            description: "A website for a night club in Pokhara.",
             logo: "",
             link: {
-                label: "www.iphonefixbyxpf.com",
-                href: "https://www.iphonefixbyxpf.com/",
+                label: "www.catwalkpokhara.com",
+                href: "https://www.catwalkpokhara.com/",
             },
         },
         {

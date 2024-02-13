@@ -64,7 +64,7 @@ export default function Stack() {
     return (
         <div className='min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center text-center'>
             <h2 className='text-[5rem]'>My Stack</h2>
-            <p className='text-[1.8rem] text-gray-400'>These are my thech stack as of now.</p>
+            <p className='text-[1.8rem] text-gray-400'>These are my tech stack as of now.</p>
 
             <div className='mt-[2rem] grid gap-[1rem]'>
                 {/* first_row */}
