@@ -5,10 +5,11 @@ import Marquee from "react-fast-marquee";
 import Header from "../header/Header";
 
 // import hooks
-import useNavMenu from "../../../../hooks/useNav";
+import useNavMenu from "../../../hooks/useNav";
 
 const Banner = () => {
     const menu = useNavMenu();
+
     const resumeObject = menu.find((m) => m.label === "Resume")!;
 
     return (

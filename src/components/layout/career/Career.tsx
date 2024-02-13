@@ -1,24 +1,7 @@
+import { MY_DATA } from "../../../data/my_data";
+
 const Career = () => {
-    const career = [
-        {
-            start_date: "July, 2023",
-            end_date: "...present",
-            company: "Rangin Technology",
-            role: "Full Stack Developer",
-            description: "I worked on the Google Search team, where I was responsible for the development of the search engine's user interface.",
-            website: "https://www.google.com",
-            companyLogo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-        },
-        {
-            start_date: "May, 2023",
-            end_date: "July, 2023",
-            company: "Nipuna Sewa",
-            role: "Reac Developer",
-            description: "I worked on the Facebook Ads team, where I was responsible for the development of the ads manager.",
-            website: "https://www.facebook.com",
-            companyLogo: "https://www.facebook.com/images/fb_icon_325x325.png",
-        },
-    ];
+    const career = MY_DATA.work;
 
     return (
         <div className="min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center gap-[1rem]">
@@ -51,8 +34,8 @@ const Career = () => {
 
 
                                 <div className="flex flex-col justify-between text-end md:flex-row md:just md:text-start">
-                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.start_date}</div>
-                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.end_date}</div>
+                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.start}</div>
+                                    <div className='whitespace-nowrap text-[1.5rem]'>{exp.end}</div>
                                 </div>
 
                                 {/* <hr className="flex-grow min-w-[10rem] border-gray-400 group-hover:border-black dark:border-gray-400 dark:group-hover:border-white" /> */}

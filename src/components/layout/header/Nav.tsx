@@ -1,25 +1,26 @@
-import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
+import { Link, useNavigate } from "react-router-dom";
 
-import useNavMenu from "../../../../hooks/useNav";
-import useSocials from "../../../../hooks/useSocials";
+// import hooks
+import useNavMenu from "../../../hooks/useNav";
+
+// import data
+import { MY_DATA } from "../../../data/my_data";
+
 // imort components
 import MenuButton from "../../common/button/MenuButton";
+import { useUtilStore } from "../../../store/useUtilStore";
 
 // import store
-import { useUtilStore } from '../../../../store/useUtilStore';
 
 const Nav = () => {
+    const navMenu = useNavMenu();
+    const navigate = useNavigate();
+    const socials = MY_DATA.contact.social;
     const { isMenuOpen, toggleMenu } = useUtilStore();
 
-    const navMenu = useNavMenu();
-    const socials = useSocials();
-    const navigate = useNavigate();
-
     const menuVariants = {
-        open: {
-            height: "600px", width: "385px", top: "-10px", right: "-10px", transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] }
-        },
+        open: { height: "600px", width: "385px", top: "-10px", right: "-10px", transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] } },
         closed: { height: "45px", width: "130px", top: "0px", right: "0px", transition: { duration: 0.75, delay: 0.35, type: "tween", ease: [0.76, 0, 0.24, 1] } }
     }
 
@@ -84,7 +85,7 @@ const Nav = () => {
                         socials.map((social, index) => {
                             return (
                                 <div onClick={() => toggleMenu()} key={index} className="border-b border-transparent hover:border-b hover:border-black transition-all ease-in-out duration-500">
-                                    <Link target="_blank" to={social.url} className="h-full w-full inline-block text-center">{social.title}</Link>
+                                    <Link target="_blank" to={social.url} className="h-full w-full inline-block text-center">{social.name}</Link>
                                 </div>
                             )
                         })

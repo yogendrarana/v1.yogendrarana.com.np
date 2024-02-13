@@ -1,10 +1,11 @@
 
 // import components
 import Projects from "../projects/Projects";
-import Stack from "../../components/layout/stack/Stack";
-import Banner from "../../components/layout/banner/Banner";
-import Footer from "../../components/layout/footer/Footer";
-import Career from "../../components/layout/career/Career";
+import Stack from "../../../components/layout/stack/Stack";
+import Banner from "../../../components/layout/banner/Banner";
+import Career from "../../../components/layout/career/Career";
+import Footer from "../../../components/layout/footer/Footer";
+
 
 const Home = () => {
     return (

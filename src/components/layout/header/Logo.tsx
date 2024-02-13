@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router-dom";
-// import GsapMagnetic from "../magnetic/GsapMagnetic";
 
 const Logo = () => {
     const navigate = useNavigate();
 
     return (
-        // <GsapMagnetic>
         <div onClick={() => navigate('/')} className='group inline-flex gap-[10px] cursor-pointer '>
             <p className="text-[1.75rem] group-hover:rotate-[360deg] transition-all ease-custom-transition duration-500">©</p>
 
@@ -35,7 +33,6 @@ const Logo = () => {
                 </div>
             </div>
         </div>
-        // </GsapMagnetic>
     )
 }
 

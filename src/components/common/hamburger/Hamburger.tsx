@@ -1,5 +1,5 @@
 // import store
-import { useUtilStore } from '../../../../store/useUtilStore';
+import { useUtilStore } from "../../../store/useUtilStore";
 
 const Hamburger = ({ bg }: { bg: string }) => {
     const { isMenuOpen } = useUtilStore();

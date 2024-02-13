@@ -1,3 +1,5 @@
+import { MY_DATA } from "../data/my_data";
+
 const useNavMenu = () => {
     const navMenu = [
         {
@@ -14,7 +16,7 @@ const useNavMenu = () => {
         },
         {
             label: "Resume",
-            href: "https://cv-yogendra-rana.vercel.app/",
+            href: MY_DATA.cvUrl,
         },
     ]
     return navMenu;

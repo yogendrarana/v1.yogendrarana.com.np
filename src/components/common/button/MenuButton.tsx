@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
-import { useUtilStore } from '../../../../store/useUtilStore';
+
+// import components
 import Hamburger from '../hamburger/Hamburger';
 
+// import store
+import { useUtilStore } from '../../../store/useUtilStore';
 
 export default function MenuButton() {
     const { isMenuOpen, toggleMenu } = useUtilStore();

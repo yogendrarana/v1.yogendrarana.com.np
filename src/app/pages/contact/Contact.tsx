@@ -1,7 +1,10 @@
-import Footer from "../../components/layout/footer/Footer";
-import Header from "../../components/layout/header/Header";
-import Transition from "../../components/common/transition/Transition";
 import { Link } from "react-router-dom";
+import { MY_DATA } from "../../../data/my_data";
+
+// import components
+import Header from "../../../components/layout/header/Header";
+import Footer from "../../../components/layout/footer/Footer";
+import Transition from "../../../components/common/transition/Transition";
 
 const ContactPage = () => {
     return (
@@ -9,20 +12,23 @@ const ContactPage = () => {
             <Header />
 
             <div className="px-[var(--px)] sm:px-[var(--md-px)] flex flex-col">
+
+                {/* heading */}
                 <div className="py-[4rem] border-b">
-                    <div className="text-[5rem] uppercase">
+                    <div className="text-[5rem] font-bold uppercase">
                         <p>Lets's Work</p>
                         <p className="">Together!</p>
                     </div>
                 </div>
 
+                {/* contact detail */}
                 <div className="py-[4rem] cursor-pointer border-b">
-                    <p className="text-[1.75rem]">Get in touch by email:</p>
+                    <h1 className="text-[1.75rem]">Get in touch by email:</h1>
                     <button className="
                             mt-[1rem]
                             inline-block
                             relative 
-                            font-bold
+                            font-boldborder
                             text-[1.5rem] 
                             before:content-['']
                             before:py-[1rem]
@@ -41,23 +47,22 @@ const ContactPage = () => {
                 </div>
 
                 <div className="py-[4rem]">
-                    <p className="text-[1.75rem]">Or you can follow me on:</p>
+                    <p className="text-[1.75rem]">Or you can find me on:</p>
                     <div className="mt-[1rem] text-[1.5rem] font-bold flex flex-wrap gap-[3rem] sm:flex-col sm:gap-[1rem]">
-                        <Link to="#" className="">GitHub</Link>
-                        <Link to="#" className="">LinkedIn</Link>
-                        <Link to="#" className="">Instagram</Link>
-                        <Link to="#" className="">Twitter</Link>
+                        {
+                            MY_DATA.contact.social.map((social, index) => {
+                                return (
+                                    <Link key={index} to={social.url} target="_blank" className="hover:underline">{social.name}</Link>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
 
             {/* footer */}
             <Footer />
-
         </div>
-
-
-
     )
 }
 

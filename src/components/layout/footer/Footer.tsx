@@ -1,5 +1,5 @@
 import Watch from "../../common/watch/Watch";
-import { Socials } from "../../common/socials/Socials";
+import Socials from "../../common/socials/Socials";
 import BackToTopButton from "../../common/button/BackToTopButton";
 
 const Footer = () => {
