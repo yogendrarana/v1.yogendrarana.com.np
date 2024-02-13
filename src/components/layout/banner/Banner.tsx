@@ -17,7 +17,7 @@ const Banner = () => {
             <Header />
 
             <div className='lg:flex gap-[3rem] text-center text-[10rem] font-bold w-full'>
-                <Marquee>
+                <Marquee speed={100}>
                     <p className="tracking-[1rem] md:tracking-normal"><span className="md:ml-[5rem]">*</span> Yogendra Rana </p>
                 </Marquee>
             </div>

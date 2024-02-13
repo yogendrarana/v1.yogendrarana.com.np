@@ -11,7 +11,7 @@ const ContactPage = () => {
         <div className="min-h-screen flex flex-col">
             <Header />
 
-            <div className="px-[var(--px)] sm:px-[var(--md-px)] flex flex-col">
+            <div className="px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-between">
 
                 {/* heading */}
                 <div className="py-[4rem] border-b">

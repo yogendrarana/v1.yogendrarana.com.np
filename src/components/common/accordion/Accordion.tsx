@@ -42,7 +42,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, activeAccordion
                                 collapsed: { opacity: 0, height: 0 }
                             }}
                             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
-                            className="text-[1.5rem] text-gray-400"
+                            className="text-[1.5rem] text-gray-500"
                         >{answer}</motion.section>
                     )}
                 </AnimatePresence>
