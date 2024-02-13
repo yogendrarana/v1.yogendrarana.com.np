@@ -9,7 +9,9 @@
     --btn-height: 2.5rem;
 
     /* padding */
-    --padding-x: 5rem;
+    --px: 5rem;
+    --md-px: 1.5rem;
+
 
     /* font size */
     --normal-font-size: 18px;

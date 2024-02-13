@@ -23,10 +23,9 @@ const Banner = () => {
 
             <div
                 className='
-                    w-full px-[var(--padding-x)] py-[3rem]
+                    w-full px-[var(--px)] sm:px-[var(--sm-px)] py-[3rem]
                     flex justify-between items-center 
                     text-[1.5rem] text-center
-                    sm:px-[1rem]
                 '
             >
                 <p>Full Stack Developer</p>

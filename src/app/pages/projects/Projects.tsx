@@ -27,7 +27,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="min-h-[75vh] px-[var(--padding-x)] flex flex-col justify-center md:px-[calc(var(--padding-x)-20px)]">
+        <div className="min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center">
             <h2 className='text-[5rem]'>Projects</h2>
 
             <div className="flex flex-col gap-[3rem]">
@@ -38,8 +38,7 @@ const Projects = () => {
                             className="
                                     group
                                     pb-4
-                                    border-b
-                                    border-gray-400 hover:border-black dark:border-gray-400 dark:group-hover:border-white
+                                    border-b border-gray-400 hover:border-black dark:border-gray-400 dark:group-hover:border-white
                                     flex justify-between gap-[1rem] 
                                     cursor-pointer 
                                     text-gray-500 hover:text-black 

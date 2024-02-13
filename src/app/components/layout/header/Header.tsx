@@ -9,9 +9,8 @@ const Header = () => {
             <div
                 className='
                     h-[var(--header-height)] w-full 
-                    px-[var(--padding-x)] 
+                    px-[var(--px)] sm:px-[var(--md-px)]
                     flex items-center justify-between 
-                    md:px-[calc(var(--padding-x)-3.5rem)]
                     relative
                 '
             >
