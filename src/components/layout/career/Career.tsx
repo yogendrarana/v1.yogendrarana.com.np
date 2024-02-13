@@ -5,9 +5,10 @@ const Career = () => {
 
     return (
         <div className="min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center gap-[1rem]">
-            <div>
-                <h2 className='text-[5rem]'>Career</h2>
-            </div>
+            {/* heading */}
+            <h2 className='mb-[1rem] font-bold text-[5rem]'>Career</h2>
+
+            {/* content */}
             <div className='flex flex-col gap-[3rem]'>
                 {
                     career.map((exp, index) => {

@@ -84,8 +84,28 @@ const Nav = () => {
                     {
                         socials.map((social, index) => {
                             return (
-                                <div onClick={() => toggleMenu()} key={index} className="border-b border-transparent hover:border-b hover:border-black transition-all ease-in-out duration-500">
-                                    <Link target="_blank" to={social.url} className="h-full w-full inline-block text-center">{social.name}</Link>
+                                <div onClick={() => toggleMenu()} key={index} className="">
+                                    <Link
+                                        target="_blank"
+                                        to={social.url}
+                                        className="
+                                            inline-block
+                                            relative
+                                            text-[1.5rem]
+                                            before:content-['']
+                                            before:py-[1rem]
+                                            before:absolute before:bottom-[-0.5rem] before:left-0
+                                            before:w-0
+                                            before:hover:w-full
+                                            before:border-b-2
+                                            before:border-black
+
+
+                                            before:transition-all
+                                            before:ease-in-out
+                                            before:duration-500
+                                        "
+                                    >{social.name}</Link>
                                 </div>
                             )
                         })

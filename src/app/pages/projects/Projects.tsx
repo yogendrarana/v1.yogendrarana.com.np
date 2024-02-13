@@ -1,34 +1,12 @@
 import { Link } from "react-router-dom";
-
-// projects data
-const projects = [
-    {
-        name: 'Artsy Web',
-        description: 'This is a full stack project for art enthusiasts.',
-        link: 'https://artsy-art-gallery.vercel.app',
-        tech: ['React', 'Redux Toolkit', 'Stripe', 'Khalti'],
-        image: 'https://via.placeholder.com/150'
-    },
-    {
-        name: 'Swift Chat',
-        description: 'Chat application that is so simple, so elegant, just looking like a wow.',
-        link: 'https://swift-web-chat.vercel.app',
-        tech: ['Next.js', 'Tailwind', 'Pusher', 'Zustand'],
-        image: 'https://via.placeholder.com/150'
-    },
-    {
-        name: 'Ecommerce',
-        description: 'This is a ecommerce application.',
-        link: 'https://react-web-ecommerce.vercel.app/',
-        tech: ['React', 'TypeScript', 'Tailwind', 'Zustand'],
-        image: 'https://via.placeholder.com/150'
-    }
-]
+import { MY_DATA } from "../../../data/my_data";
 
 const Projects = () => {
+    const projects = MY_DATA.projects;
+
     return (
         <div className="min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center">
-            <h2 className='text-[5rem]'>Projects</h2>
+            <h2 className='mb-[1rem] font-bold text-[5rem]'>Projects</h2>
 
             <div className="flex flex-col gap-[3rem]">
                 {
@@ -48,10 +26,10 @@ const Projects = () => {
                                 "
                         >
                             <div className="flex flex-col justify-between overflow-hidden">
-                                <div className='whitespace-nowrap text-[2rem]'>{project.name}</div>
-                                <div className="flex justify-between gap-[1rem] flex-wrap">
+                                <div className='whitespace-nowrap text-[2rem]'>{project.title}</div>
+                                <div className="flex justify-between gap-x-[2rem] flex-wrap">
                                     {
-                                        project.tech.map((tech, index) => (
+                                        project.techStack.map((tech, index) => (
                                             <span key={index} className='text-[1.5rem]'>{tech}</span>
                                         ))
                                     }
@@ -59,8 +37,8 @@ const Projects = () => {
                             </div>
 
                             <div className="flex justify-between gap-[2rem] items-end">
-                                <p className="text-[1.5rem]">{new URL(project.link).hostname}</p>
-                                <Link to={project.link} target="_blank" className="text-[1.75rem]">
+                                <p className="text-[1.5rem]">{project.link.label}</p>
+                                <Link to={project.link.href} target="_blank" className="text-[1.75rem]">
                                     <i className="fa-solid fa-square-arrow-up-right"></i>
                                 </Link>
                             </div>

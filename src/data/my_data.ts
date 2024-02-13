@@ -100,7 +100,7 @@ export const MY_DATA = {
         },
         {
             title: "Artsy Web Gallery",
-            techStack: ["JavaScript/TS", "React.js", "Redux Toolkit", "Express.js", "Mongo", "JWT", "Stripe", "Khalti"],
+            techStack: ["React.js", "Redux Toolkit", "Express.js", "MongoDB", "Stripe", "Khalti"],
             description: "A web platform for artists to showcase their work and connect with art lovers.",
             logo: "",
             link: {
@@ -110,7 +110,7 @@ export const MY_DATA = {
         },
         {
             title: "Swift Chat",
-            techStack: ["Side Project", "Next.js", "Zustand", "Pusher", "Next Auth", "Framer Motion"],
+            techStack: ["Next.js", "Zustand", "Pusher", "Auth.js", "Framer Motion"],
             description: "A minimal web chat application.",
             logo: "",
             link: {
@@ -120,7 +120,7 @@ export const MY_DATA = {
         },
         {
             title: "Ecommerce Website",
-            techStack: ["Side Project", "React.js", "Zustand", "Framer Motion"],
+            techStack: ["React.js", "Zustand", "Framer Motion"],
             description: "An ecommerce website with all the necessary ui's like auth form, filter, slider, cart, payment form etc.",
             logo: "",
             link: {
@@ -131,7 +131,7 @@ export const MY_DATA = {
     ],
     faq: [
         {
-            "question": "What does my tech stack include?",
+            "question": "What is my tech stack?",
             "answer": "My tech stack includes React and Next.js for making the website look nice, and Node.js and Express.js for doing the heavy lifting behind the scenes. I also handle data using MongoDB, MySQL, and PostgreSQL. In my own projects, I like to play around with Go and Gin."
         },
         {
