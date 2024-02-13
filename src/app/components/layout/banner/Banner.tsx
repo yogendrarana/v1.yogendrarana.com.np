@@ -12,7 +12,7 @@ const Banner = () => {
     const resumeObject = menu.find((m) => m.label === "Resume")!;
 
     return (
-        <div className='h-screen w-full flex flex-col justify-between items-center border-b relative'>
+        <div className='h-[100vh] w-full flex flex-col justify-between items-center border-b relative'>
             <Header />
 
             <div className='lg:flex gap-[3rem] text-center text-[10rem] font-bold w-full'>
@@ -26,12 +26,13 @@ const Banner = () => {
                     w-full px-[var(--padding-x)] py-[3rem]
                     flex justify-between items-center 
                     text-[1.5rem] text-center
+                    sm:px-[1rem]
                 '
             >
                 <p>Full Stack Developer</p>
                 <div className="flex gap-[2rem]">
-                    <Link to="/contact" className="cursor-pointer border-b border-transparent hover:border-black transition-all ease duration-300">Contact</Link>
-                    <Link to={resumeObject.href} target="_blank" className="cursor-pointer border-b border-transparent hover:border-black transition-all ease duration-300">Resume</Link>
+                    <Link to="/contact" className="cursor-pointer border-b border-black transition-all ease duration-300">Contact</Link>
+                    <Link to={resumeObject.href} target="_blank" className="cursor-pointer border-b border-black transition-all ease duration-300">Resume</Link>
                 </div>
             </div>
         </div >

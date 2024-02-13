@@ -1,7 +1,8 @@
 // import components
-import Logo from "../../common/logo/Logo";
-import { Socials } from "../../common/socials/Socials";
 import Nav from "./Nav";
+import Logo from "./Logo";
+import { Socials } from "../../common/socials/Socials";
+
 const Header = () => {
     return (
         <>
