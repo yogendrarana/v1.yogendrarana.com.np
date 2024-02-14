@@ -88,16 +88,16 @@ export const MY_DATA = {
         "Ubuntu",
     ],
     projects: [
-        {
-            title: "Catwalk Pokhara",
-            techStack: ["HTML", "CSS", "JS"],
-            description: "A website for a night club in Pokhara.",
-            logo: "",
-            link: {
-                label: "www.catwalkpokhara.com",
-                href: "https://www.catwalkpokhara.com/",
-            },
-        },
+        // {
+        //     title: "Catwalk Pokhara",
+        //     techStack: ["HTML", "CSS", "JS"],
+        //     description: "A website for a night club in Pokhara.",
+        //     logo: "",
+        //     link: {
+        //         label: "www.catwalkpokhara.com",
+        //         href: "https://www.catwalkpokhara.com/",
+        //     },
+        // },
         {
             title: "Artsy Web Gallery",
             techStack: ["React.js", "Redux Toolkit", "Express.js", "MongoDB", "Stripe", "Khalti"],
