@@ -1,3 +1,5 @@
+// import css
+import "./Home.css";
 
 // import components
 import Projects from "../projects/Projects";
@@ -9,7 +11,7 @@ import Footer from "../../../components/layout/footer/Footer";
 
 const Home = () => {
     return (
-        <div>
+        <div className="home">
             <div>
                 <Banner />
             </div>
