@@ -6,11 +6,13 @@ import Header from "../header/Header";
 
 // import hooks
 import useNavMenu from "../../../hooks/useNav";
+import GsapMagnetic from "../../common/magnetic/GsapMagnetic";
 
 const Banner = () => {
     const menu = useNavMenu();
 
     const resumeObject = menu.find((m) => m.label === "Resume")!;
+    const bottomNav = [{ label: "Contact", href: "/contact" }, { label: "Resume", href: resumeObject.href }]
 
     return (
         <div className='h-[100vh] w-full flex flex-col justify-between items-center border-b relative'>
@@ -30,9 +32,32 @@ const Banner = () => {
                 '
             >
                 <p>Full Stack Developer</p>
-                <div className="flex gap-[2rem]">
-                    <Link to="/contact" className="cursor-pointer border-b border-black transition-all ease duration-300">Contact</Link>
-                    <Link to={resumeObject.href} target="_blank" className="cursor-pointer border-b border-black transition-all ease duration-300">Resume</Link>
+                <div className="flex gap-[5rem] md:gap-[3rem]">
+                    {
+                        bottomNav.map((nav, index) => (
+                            <GsapMagnetic key={index}>
+
+                                <div className="group">
+                                    <Link
+                                        to={nav.href}
+                                        target={nav.label === "Resume" ? "_blank" : "_self"}
+                                        className="
+                                            group
+                                            relative
+                                            cursor-pointer 
+                                            
+                                            before:content-['']
+                                            before:h-[0.75rem] before:w-[0.75rem]
+                                            before:bg-black before:rounded-full
+                                            before:absolute before:bottom-[-1rem] before:left-1/2 before:-translate-x-1/2
+                                            before:scale-0 group-hover:before:scale-100
+                                            before:transition-all before:ease before:duration-300
+                                        "
+                                    >{nav.label}</Link>
+                                </div>
+                            </GsapMagnetic>
+                        ))
+                    }
                 </div>
             </div>
         </div >
