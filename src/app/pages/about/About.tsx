@@ -24,7 +24,7 @@ const AboutPage = () => {
                 <div className="py-[4rem] border-b">
                     <div className="text-[5rem] font-bold uppercase">
                         <p>Learn</p>
-                        <p className="">About Me</p>
+                        <p className="">About Me!</p>
                     </div>
                 </div>
 

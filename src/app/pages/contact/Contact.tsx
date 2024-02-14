@@ -20,7 +20,7 @@ const ContactPage = () => {
                 {/* heading */}
                 <div className="py-[4rem] border-b">
                     <div className="text-[5rem] font-bold uppercase">
-                        <p>Lets's</p>
+                        <p>Let's</p>
                         <p>Work Together!</p>
                     </div>
                 </div>
