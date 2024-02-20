@@ -37,8 +37,8 @@ const Projects = () => {
                             </div>
 
                             <div className="flex justify-between gap-[2rem] items-end">
-                                <p className="text-[1.5rem]">{project.link.label}</p>
-                                <Link to={project.link.href} target="_blank" className="text-[1.75rem]">
+                                <Link to={project.link.href} target="_blank" className="text-[1.75rem] flex items-center gap-[1rem]">
+                                    <p className="text-[1.5rem]">{project.link.label}</p>
                                     <i className="fa-solid fa-square-arrow-up-right"></i>
                                 </Link>
                             </div>
