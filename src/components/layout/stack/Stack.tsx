@@ -1,4 +1,5 @@
 // import logos
+import Marquee from "react-fast-marquee"
 import {
     DockerLogo,
     DrizzleLogo,
@@ -48,10 +49,10 @@ const second_row = [
 // stack component
 const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
     return (
-        <div className='flex flex-wrap gap-[1rem] justify-center cursor-pointer'>
+        <div className='w-auto flex flex-wrap gap-[1rem] justify-center cursor-pointer'>
             {
                 tech.map((item, index) => (
-                    <div key={index} className='group p-[1.25rem] bg-white shadow-sm border dark:border-gray-600 dark:bg-black flex items-center gap-[1rem]'>
+                    <div key={index} className='group p-[1.25rem] shadow-sm dark:border-gray-600 dark:bg-black flex items-center gap-[1rem]'>
                         <img src={item?.icon} alt={item.name} className="h-[4rem] w-[4rem] object-cover" />
                     </div>
                 ))
@@ -62,16 +63,20 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
 
 export default function Stack() {
     return (
-        <div className='min-h-[75vh] px-[var(--px)] sm:px-[var(--md-px)] flex flex-col justify-center text-center'>
+        <div className='min-h-[75vh] flex flex-col justify-center text-center'>
             <h2 className='text-[5rem]'>My Stack</h2>
             <p className='text-[1.8rem] text-gray-400'>These are my tech stack as of now.</p>
 
             <div className='mt-[2rem] grid gap-[1rem]'>
                 {/* first_row */}
-                <Tech tech={first_row} />
+                <Marquee autoFill={true} speed={30} pauseOnClick={true} gradient={true} gradientWidth={75}>
+                    <Tech tech={first_row} />
+                </Marquee>
 
                 {/* second_row */}
-                <Tech tech={second_row} />
+                <Marquee autoFill={true} speed={40} pauseOnClick={true} gradient={true} gradientWidth={75}>
+                    <Tech tech={second_row} />
+                </Marquee>
             </div>
         </div >
     )
