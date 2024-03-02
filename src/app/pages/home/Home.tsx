@@ -1,6 +1,3 @@
-// import css
-import "./Home.css";
-
 // import components
 import Projects from "../projects/Projects";
 import Stack from "../../../components/layout/stack/Stack";
@@ -12,7 +9,7 @@ import Footer from "../../../components/layout/footer/Footer";
 const Home = () => {
     return (
         <div className="home">
-            <div>
+            <div className="banner">
                 <Banner />
             </div>
             <div className="mt-[5rem]">

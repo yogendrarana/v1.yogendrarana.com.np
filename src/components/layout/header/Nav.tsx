@@ -69,7 +69,7 @@ const Nav = () => {
                                     <div
                                         className={`
                                             ${isMenuOpen ? "" : "opacity-0"} 
-                                            h-full w-full inline-block translate-x-[-2.5rem] group-hover:translate-x-0 transition-all ease-in-out duration-700`
+                                            h-full w-full inline-block translate-x-[-2.5rem] group-hover:translate-x-0 transition-all ease-in-out duration-500`
                                         }
                                     >{item.label}</div>
                                 </div>

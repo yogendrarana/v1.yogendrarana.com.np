@@ -31,7 +31,7 @@ const Banner = () => {
                     text-[1.5rem] text-center
                 '
             >
-                <p>Full Stack Developer</p>
+                <p className="font-bold">Full Stack Developer</p>
                 <div className="flex gap-[5rem] md:gap-[3rem]">
                     {
                         bottomNav.map((nav, index) => (

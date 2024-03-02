@@ -31,3 +31,20 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
+
+/* styles */
+.banner::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    --size: 75px;
+    background-color: white;
+    background:
+        linear-gradient(hsl(0, 13%, 95%) 0 2px,
+            transparent 2px var(--size)) 50% 50% / var(--size) var(--size),
+        linear-gradient(90deg,
+            hsl(0, 13%, 95%) 0 2px,
+            transparent 2px var(--size)) 50% 50% / var(--size) var(--size);
+    mask: linear-gradient(180deg, white, transparent);
+    z-index: -1;
+}

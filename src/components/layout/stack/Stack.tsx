@@ -4,7 +4,7 @@ import {
     DockerLogo,
     DrizzleLogo,
     ExpressLogo,
-    GinLogo,
+    // GinLogo,
     GitLogo,
     GoLogo,
     JavaScriptLogo,
@@ -32,7 +32,7 @@ const first_row = [
     { name: "Node", icon: NodeLogo },
     { name: "Express", icon: ExpressLogo },
     { name: "Nest", icon: NestLogo },
-    { name: "Gin", icon: GinLogo },
+    // { name: "Gin", icon: GinLogo },
 ]
 const second_row = [
     { name: "PostgreSQL", icon: PostgreSLogo },
@@ -52,7 +52,7 @@ const Tech = ({ tech }: { tech: { name: string, icon?: string }[] }) => {
         <div className='w-auto flex flex-wrap gap-[2rem] justify-center cursor-pointer'>
             {
                 tech.map((item, index) => (
-                    <div key={index} className='group p-[1.25rem] shadow-sm dark:border-gray-600 dark:bg-black flex flex-col justify-center items-center gap-[1rem]'>
+                    <div key={index} className='group p-[1.25rem] flex flex-col justify-center items-center gap-[1rem]'>
                         <img src={item?.icon} alt={item.name} className="h-[4rem] w-[4rem] object-cover" />
                         <p className='text-xl dark:text-gray-200'>{item.name}</p>
                     </div>
