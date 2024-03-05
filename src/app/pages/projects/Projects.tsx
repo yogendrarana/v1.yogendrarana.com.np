@@ -25,15 +25,10 @@ const Projects = () => {
                                     md:gap-[2rem]
                                 "
                         >
-                            <div className="flex flex-col justify-between overflow-hidden">
-                                <div className='whitespace-nowrap text-[2rem]'>{project.title}</div>
-                                <div className="flex justify-between gap-x-[2rem] flex-wrap">
-                                    {
-                                        project.techStack.map((tech, index) => (
-                                            <span key={index} className='text-[1.25rem]'>{tech}</span>
-                                        ))
-                                    }
-                                </div>
+                            <div className="w-1/2 sm:w-full flex flex-col gap-[1.5rem] justify-between overflow-hidden">
+                                <div className='whitespace-nowrap text-[2rem] text-black'>{project.title}</div>
+                                <div className="flex flex-wrap gap-x-[1.5rem] text-[1.25rem]">{project.techStack.map((tech, index) => <span className="wrap-text" key={index}>{tech}</span>)} </div>
+                                <div className="text-[1.25rem]">{project.description}</div>
                             </div>
 
                             <div className="flex justify-between gap-[2rem] items-end">

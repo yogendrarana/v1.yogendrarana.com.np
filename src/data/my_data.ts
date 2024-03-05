@@ -91,7 +91,7 @@ export const MY_DATA = {
         {
             title: "Iphone Fix by XPF",
             techStack: ["HTML", "CSS", "JS"],
-            description: "A website for a night club in Pokhara. Role: Frontend Development.",
+            description: "A website for a mobile repair shop. Created the website using HTML, CSS, and JS.",
             logo: "",
             link: {
                 label: "www.iphonefixbyxpf.com",
@@ -100,8 +100,8 @@ export const MY_DATA = {
         },
         {
             title: "Artsy Web Gallery",
-            techStack: ["React.js", "Redux Toolkit", "Express.js", "MongoDB", "Stripe", "Khalti"],
-            description: "A web platform for artists to showcase their work and connect with art lovers.",
+            techStack: ["React.js", "Redux-Toolkit", "Express.js", "MongoDB", "Stripe", "Khalti"],
+            description: "A web platform for artists to showcase their work and connect with art lovers. Used React.js for the frontend, Express.js for the backend, and MongoDB for the database. Includes Stripe and Khalti for payment.",
             logo: "",
             link: {
                 label: "artsy-art-gallery.vercel.app",
@@ -110,8 +110,8 @@ export const MY_DATA = {
         },
         {
             title: "Swift Chat",
-            techStack: ["Next.js", "Zustand", "Pusher", "Auth.js", "Framer Motion"],
-            description: "A minimal web chat application.",
+            techStack: ["Next.js", "Zustand", "Pusher", "NextAuth.js", "Framer-Motion"],
+            description: "A minimal web chat application. I created the frontend and backend by myself utlizing Next.js, Pusher for real-time chat, Zustand for state management and NextAuth for authentication.",
             logo: "",
             link: {
                 label: "swift-web-chat.vercel.app",
@@ -120,8 +120,8 @@ export const MY_DATA = {
         },
         {
             title: "Ecommerce Website",
-            techStack: ["React.js", "Zustand", "Framer Motion"],
-            description: "An ecommerce website with all the necessary ui's like auth form, filter, slider, cart, payment form etc.",
+            techStack: ["React", "Zustand", "Framer-Motion"],
+            description: "An ecommerce website with all the necessary ui's like auth form, filter, slider, cart, payment form etc. I created it to practice my frontend skills.",
             logo: "",
             link: {
                 label: "react-web-ecommerce.vercel.app",

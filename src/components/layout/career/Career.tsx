@@ -28,8 +28,8 @@ const Career = () => {
                                     md:gap-[2rem]
                                 "
                             >
-                                <div className="flex flex-col justify-between">
-                                    <div className='whitespace-nowrap text-[2rem]'>{exp.company}</div>
+                                <div className="flex flex-col gap-[1.5rem] justify-between">
+                                    <div className='whitespace-nowrap text-[2rem] text-black'>{exp.company}</div>
                                     <div className='whitespace-nowrap text-[1.25rem]'>{exp.role}</div>
                                 </div>
 
